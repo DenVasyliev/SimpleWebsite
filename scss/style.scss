@@ -29,7 +29,6 @@ body {
 		padding: 0;
 		margin: 0;
 		position: absolute;
-		left: 0;
 		bottom: 0;
 	}
 	&--main {
@@ -98,7 +97,7 @@ nav{
 	}
 }
 .section {
-	height: 100vh;
+	min-height: 100vh;
 	padding: 5rem;
 	@include cover;
 	background-color: #044885;
@@ -108,7 +107,7 @@ nav{
 		
 		&--title {
 			text-transform: uppercase;
-			margin-top: 10rem;
+			margin-top: 15rem;
 			margin-bottom: 0;
 			line-height: 1;
 			font-size: 4.8rem;
@@ -118,21 +117,22 @@ nav{
 		&--subtitle {
 			font-size: 2.2rem;
 			font-weight: 400;
-			margin: 0 0 5rem;
+			margin: 0 0 5.5rem;
 			letter-spacing: 6px;
 		}
 		&--scroll {
 			font-size: 1.4rem;
 			letter-spacing: 3px;
+			margin: 0 auto;
 		}
 	}
 	&__middle {
 		padding: 5rem;
-		height: 85vh;
+		min-height: 85vh;
 	}
 	&__small {
 		padding: 20px auto;
-		height: 40vh;
+		min-height: 40vh;
 		background-color: #232323;
 		position: relative;
 	}
@@ -140,7 +140,7 @@ nav{
 .form {
 	display: flex;
 	justify-content: space-between;
-	margin: 0 0 8rem;
+	margin: 0 0 10rem;
 	width: 60%;
 	border: 2px solid $main-color;
 	&__input {
@@ -172,13 +172,13 @@ nav{
 	text-transform: uppercase;
 	color: $main-color;
 	background-color: $btn-color;
-	padding: 25px 15px;
+	padding: 15px 20px;
 	border: none;
 	font-family: Aleo, serif;
 	font-size: 1.6rem;
 	font-weight: 400;
 	letter-spacing: 2px;
-	width: 40%;
+	text-align: center;
 	@include hover {
 		background-color: #09253b;
 		color: #49fa83;
@@ -194,17 +194,18 @@ nav{
 	}
 	&__title {
 		text-align: center;
-		margin-bottom: 50px;
+		margin-bottom: 100px;
 	}
 	&__text {
 		@include flex-column;
+		align-items: flex-start;
 		margin: 20px 20px;
 		padding: 20px;
 		width: 45%;
 		color: $text-color;
 		line-height: 2;
 		p:last-of-type {
-			margin-bottom: 40px;
+			margin-bottom: 50px;
 		}	
 	}
 	&__gallery {
@@ -224,8 +225,8 @@ nav{
 	}
 	&__image {
 		width: 30%;
-		height: 300px;
-		max-height: 300px;
+		// height: 300px;
+		min-height: 300px;
 		position: relative;
 		overflow: hidden;
 		&--photo {
@@ -239,12 +240,13 @@ nav{
 	}
 	&__comment {
 		width: 60%;
-		padding: 30px;
+		padding: 60px;
 		background-color: #333333;
-		max-height: 350px;
-		overflow: auto;
+		max-height: 450px;
+		overflow: hidden;
 		&--header {
-			margin-bottom: 4rem;
+			margin-top: 0;
+			margin-bottom: 5rem;
 			font-size: 2rem;
 			font-weight: 400;
 			color: $main-color;
@@ -260,6 +262,7 @@ nav{
 				vertical-align: -2.5rem;
 			}
 		}
+		
 	}
 }
 .services {
@@ -293,7 +296,7 @@ nav{
 		}
 	}
 	&__header {
-		margin: 0;
+		margin: 10px 0 16px;
 		font-size: 2rem;
 		font-weight: 400;
 		color: $main-color;
@@ -313,7 +316,7 @@ nav{
 	text-align: center;
 	&__title {
 		margin: 0;
-		margin-top: 40px;
+		margin-top: 70px;
 		font-weight: 700;
 		text-transform: uppercase;
 		font-size: 2.4rem;
